@@ -52,7 +52,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent(empService) {
         this.empService = empService;
-        this.title = "Customer Management Portal";
+        this.title = "Customer Management Portal!!!";
     }
     ;
     AppComponent = __decorate([
@@ -131,7 +131,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/cardView/cardview.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ".card {\r\n    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\r\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\r\n    max-width: 275px;\r\n    margin: 5px;\r\n    text-align: center;\r\n    font-family: arial;\r\n    margin-bottom: 30px;\r\n    background: #2f242a8c;\r\n    color: #fff;\r\n  }\r\n  \r\n  .title {\r\n    color: grey;\r\n    font-size: 18px;\r\n  }\r\n  \r\n  button {\r\n    border: none;\r\n    outline: 0;\r\n    display: inline-block;\r\n    padding: 8px;\r\n    color: white;\r\n    background-color: #000;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    font-size: 18px;\r\n  }\r\n  \r\n  a {\r\n    text-decoration: none;\r\n    font-size: 22px;\r\n    color: black;\r\n  }\r\n  \r\n  button:hover, a:hover {\r\n    opacity: 0.7;\r\n  }\r\n  \r\n  .card-view{\r\n      background: #944e4e;\r\n  }\r\n  \r\n  .CustomerImagePath{\r\n    width:245px;\r\n    height:245px;\r\n    padding: 10px;\r\n  }"
+module.exports = ".card {\r\n    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\r\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);\r\n    max-width: 275px;\r\n    margin: 5px;\r\n    text-align: center;\r\n    font-family: arial;\r\n    margin-bottom: 30px;\r\n    background: #2f242a8c;\r\n    color: #fff;\r\n  }\r\n  .card:hover{\r\n    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\r\n    opacity: 0.7;\r\n  }\r\n  .title {\r\n    color: grey;\r\n    font-size: 18px;\r\n  }\r\n  button {\r\n    border: none;\r\n    outline: 0;\r\n    display: inline-block;\r\n    padding: 8px;\r\n    color: white;\r\n    background-color: #000;\r\n    text-align: center;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    font-size: 18px;\r\n  }\r\n  a {\r\n    text-decoration: none;\r\n    font-size: 22px;\r\n    color: black;\r\n  }\r\n  button:hover, a:hover {\r\n    opacity: 0.7;\r\n  }\r\n  .card-view{\r\n      background: #944e4e;\r\n  }\r\n  .CustomerImagePath{\r\n    width:245px;\r\n    height:245px;\r\n    padding: 10px;\r\n  }"
 
 /***/ }),
 
@@ -190,7 +190,7 @@ module.exports = "table {\r\n    width:100%;\r\n    border-collapse:collapse;\r\
 /***/ "./src/detailpage/detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container edit-details\">\n    <a class=\"back-link\" [routerLink]=\"['']\" routerLinkActive=\"active\">Back</a>\n    <h2 class=\"text-align-center\">Edit the Details:</h2>\n    <h3 class=\"text-align-center\">Customer ID: {{ empData.CustomerID }}</h3>\n    <form class=\"form-horizontal\">\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"FirstName\">First Name:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"FirstName\" placeholder=\"{{empData.FirstName}}\" name=\"FirstName\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"LastName\">Last Name:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"LastName\" placeholder=\"{{empData.LastName}}\" name=\"LastName\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"{{empData.Email}}\" name=\"email\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"PhoneNumber\">Phone Number:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"number\" class=\"form-control\" id=\"PhoneNumber\" placeholder=\"{{empData.PhoneNumber}}\" name=\"PhoneNumber\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <div class=\"col-sm-offset-2 col-sm-10\">\n                <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n            </div>\n        </div>\n    </form>\n\n</div>\n\n<div class=\"container\">\n    <h2 class=\"text-align-center\">Experience: </h2>\n    <table class=\"table\" border=\"1\" id=\"t01\">\n        <tr>\n            <th>Company Name</th>\n            <th>Exp. in Years</th>\n        </tr>\n        <tr *ngFor=\"let exp of empData.ExperienceRecords\">\n            <td>{{exp.CompanyName}}</td>\n            <td>{{exp.ExpInYears}}</td>\n        </tr>\n    </table>\n\n    <a class=\"back-link\" [routerLink]=\"['']\" routerLinkActive=\"active\">Back</a>\n</div>"
+module.exports = "<div class=\"container edit-details\">\n    <a class=\"back-link\" [routerLink]=\"['']\" routerLinkActive=\"active\">Back</a>\n    <h2 class=\"text-align-center\">Edit the Details:</h2>\n    <h3 class=\"text-align-center\">Customer ID: {{ empData.CustomerID }}</h3>\n    <form class=\"form-horizontal\">\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"FirstName\">First Name:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"FirstName\" placeholder=\"{{empData.FirstName}}\" name=\"FirstName\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"LastName\">Last Name:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"LastName\" placeholder=\"{{empData.LastName}}\" name=\"LastName\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"{{empData.Email}}\" name=\"email\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"PhoneNumber\">Phone Number:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"number\" class=\"form-control\" id=\"PhoneNumber\" placeholder=\"{{empData.PhoneNumber}}\" name=\"PhoneNumber\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <div class=\"col-sm-offset-2 col-sm-10\">\n                <button type=\"submit\" class=\"btn btn-default\" (click)=\"updateProfileData()\">update profile</button>\n            </div>\n        </div>\n    </form>\n\n</div>\n\n<div class=\"container\">\n    <h2 class=\"text-align-center\">Experience: </h2>\n    <table class=\"table\" border=\"1\" id=\"t01\">\n        <tr>\n            <th>Company Name</th>\n            <th>Exp. in Years</th>\n        </tr>\n        <tr *ngFor=\"let exp of empData.ExperienceRecords\">\n            <td>{{exp.CompanyName}}</td>\n            <td>{{exp.ExpInYears}}</td>\n        </tr>\n    </table>\n\n    <a class=\"back-link\" [routerLink]=\"['']\" routerLinkActive=\"active\">Back</a>\n</div>"
 
 /***/ }),
 
@@ -222,6 +222,21 @@ var DetailComponent = /** @class */ (function () {
         this.empId = route.snapshot.params['id'];
         this.empData = this.empService.getEmpData(this.empId);
     }
+    DetailComponent.prototype.updateProfileData = function () {
+        var _this = this;
+        this.route.queryParams.forEach(function (params) {
+            _this.empData.FirstName = params['FirstName'];
+            _this.empData.LastName = params['LastName'];
+            _this.empData.Email = params['Email'];
+            _this.empData.PhoneNumber = params['PhoneNumber'];
+            console.log(_this.route.snapshot.queryParams['FirstName']);
+            console.log(_this.route.snapshot.queryParams['LastName']);
+            console.log(_this.route.snapshot.queryParams['Email']);
+            console.log(_this.route.snapshot.queryParams['PhoneNumber']);
+        });
+        console.log(this.empData);
+        alert("bhoodev");
+    };
     DetailComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'emp-detail',
@@ -545,7 +560,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 /***/ "./src/mainPage/mainpage.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "/* table {\r\n    width:100%;\r\n}\r\ntable, th, td {\r\n    border: 1px solid #000;\r\n    border-collapse: collapse;\r\n}\r\nth, td {\r\n    padding: 15px;\r\n    text-align: left;\r\n}\r\ntable#t01 tr:nth-child(even) {\r\n    background-color: #eee;\r\n}\r\ntable#t01 tr:nth-child(odd) {\r\n   background-color: #fff;\r\n}\r\ntable#t01 th {\r\n    background-color: #35dc9e;\r\n    color: white;\r\n} */\r\n\r\n.list-view{\r\n    background: #2f242a8c;\r\n    color: #fff;\r\n}\r\n\r\n.list-heading{\r\n    color: #4261d4;\r\n}\r\n\r\n.simpos{\r\n    color: #9c4c4c;\r\n    font-size: 15px;\r\n}"
+module.exports = "/* table {\r\n    width:100%;\r\n}\r\ntable, th, td {\r\n    border: 1px solid #000;\r\n    border-collapse: collapse;\r\n}\r\nth, td {\r\n    padding: 15px;\r\n    text-align: left;\r\n}\r\ntable#t01 tr:nth-child(even) {\r\n    background-color: #eee;\r\n}\r\ntable#t01 tr:nth-child(odd) {\r\n   background-color: #fff;\r\n}\r\ntable#t01 th {\r\n    background-color: #35dc9e;\r\n    color: white;\r\n} */\r\n\r\n.list-view{\r\n    background: #2f242a8c;\r\n    color: #fff;\r\n}\r\n\r\n.list-view:hover{\r\n   text-decoration: underline;\r\n   color: red;\r\n}\r\n\r\n.list-heading{\r\n    color: #4261d4;\r\n}\r\n\r\n.simpos{\r\n    color: #9c4c4c;\r\n    font-size: 15px;\r\n}"
 
 /***/ }),
 

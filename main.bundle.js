@@ -229,13 +229,13 @@ var DetailComponent = /** @class */ (function () {
             _this.empData.LastName = params['LastName'];
             _this.empData.Email = params['Email'];
             _this.empData.PhoneNumber = params['PhoneNumber'];
-            console.log(_this.route.snapshot.queryParams['FirstName']);
-            console.log(_this.route.snapshot.queryParams['LastName']);
-            console.log(_this.route.snapshot.queryParams['Email']);
-            console.log(_this.route.snapshot.queryParams['PhoneNumber']);
+            // console.log(this.route.snapshot.queryParams['FirstName']);
+            // console.log(this.route.snapshot.queryParams['LastName']);
+            // console.log(this.route.snapshot.queryParams['Email']);
+            // console.log(this.route.snapshot.queryParams['PhoneNumber']);
         });
-        console.log(this.empData);
-        alert("bhoodev");
+        // console.log(this.empData);
+        // alert(this.empData);
     };
     DetailComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -279,15 +279,15 @@ var EmpService = /** @class */ (function () {
                 CustomerImagePath: "./assets/images/customer_photos/1.png",
                 ExperienceRecords: [
                     {
-                        CompanyName: "Abc company",
+                        CompanyName: "Apple",
                         ExpInYears: 11
                     },
                     {
-                        CompanyName: "dcda company",
+                        CompanyName: "Wikipedia",
                         ExpInYears: 12
                     },
                     {
-                        CompanyName: "dfiojij company",
+                        CompanyName: "samsung R&D",
                         ExpInYears: 5
                     }
                 ],
@@ -304,11 +304,11 @@ var EmpService = /** @class */ (function () {
                 DOJ: "12/05/2017",
                 ExperienceRecords: [
                     {
-                        CompanyName: "somting company",
+                        CompanyName: "RObert Bosch",
                         ExpInYears: 5
                     },
                     {
-                        CompanyName: "somrign company",
+                        CompanyName: "Morisson company",
                         ExpInYears: 3
                     }
                 ],
